@@ -1,0 +1,539 @@
+/* 
+ * Web page style sheet
+ *
+ * This document is written with LESS
+ *
+ * 
+ */
+	/*-- IMPORT --*/
+		@import "style.css";
+		
+	/*-- end IMPORT --*/
+	
+	/*-- start font face*/
+		/* @license
+			 * MyFonts Webfont Build ID 2181229, 2012-03-28T01:31:43-0400
+			 * 
+			 * The fonts listed in this notice are subject to the End User License
+			 * Agreement(s) entered into by the website owner. All other parties are 
+			 * explicitly restricted from using the Licensed Webfonts(s).
+			 * 
+			 * You may obtain a valid license at the URLs below.
+			 * 
+			 * Webfont: Futura Medium by Bitstream
+			 * URL: http://www.myfonts.com/fonts/bitstream/futura/medium/
+			 * Copyright: Copyright 1990-2003 Bitstream Inc. All rights reserved.
+			 * Licensed pageviews: 10,000
+			 * 
+			 * 
+			 * License: http://www.myfonts.com/viewlicense?type=web&buildid=2181229
+			 * 
+			 * © 2012 Bitstream Inc
+			*/
+			
+			
+			
+			  
+			 @font-face {font-family: 'FuturaBT-Medium';src: url('webfonts/21486D_0_0.eot');src: url('webfonts/21486D_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/21486D_0_0.woff') format('woff'),url('webfonts/21486D_0_0.ttf') format('truetype');}
+	/*-- end font face --*/
+	
+	
+   
+   /*-- Variables and theming --*/
+   		
+		@minWidth: 76px;
+		@minHeight: 47px;
+		
+   
+   		//base url for linking images to the css
+		@base-url: "http://";
+		
+		//standard padding and margin for elements that need
+			@padding: 5px;
+			@margin: 10px;
+		
+		//color schemes
+   		
+			@orange: #c7a102;
+			@darkGray: #1A1A1A;
+			@lightGray: #E0E0E0;
+			
+			@black: #0a0a0a;
+			@white: #fafafa;
+			
+		//borders
+			@thick: 1px;
+			@type: solid;
+			@color: @black;
+   		
+		//fonts and text variables and classes
+			 	
+			@font-color: @lightGray;
+			@font-family: FuturaBT-Medium;		
+			@font-size: 16px;
+			@line-height: 18px;
+			
+			@headercase: uppercase;
+			@headerColor: @darkGray;
+			
+			@h1-size: 42px;
+			@h1-lineHeight: 47px;
+			
+			@h2-size: 26px;
+			@h2-lineHeight: 29px;
+			
+			@h3-size: 16px;
+			@h3-lineHeight: 18px;
+			
+			@h5-size: 10px;
+			@h5-lineHeight: 11px;
+			
+		//entire site text classes
+			.FuturaBT-Medium { 
+				font-family: FuturaBT-Medium;
+				font-weight: normal;
+				font-style: normal;
+			}
+			
+			.text{
+				color: @font-color;
+				//.FuturaBT-Medium;
+				//font-family: @font-family;
+				font-size: @font-size;
+				line-height: @line-height;
+			}
+			
+			body{
+				.FuturaBT-Medium;
+				.text;
+				text-align: center;
+				overflow: hidden;
+				padding: @no-padding;
+				margin: @no-margin;
+				
+			}	
+		//headers	
+			h1, h2, h3, h5{
+				color: @headerColor;
+				text-transform: @headercase;
+			}
+			
+			h1{
+				font-size: @h1-size;
+				line-height: @h1-lineHeight;
+				
+			}
+			h2{
+				font-size: @h2-size;
+				line-height: @h2-lineHeight;
+				
+			}
+			h3{
+				font-size: @h3-size;
+				line-height: @h3-lineHeight;
+				
+			}
+			h5{
+				font-size: @h5-size;
+				line-height: @h5-lineHeight;
+			}
+		//links and states
+			a{ 	color: @lightGray;
+				text-decoration: none;
+				&:hover{
+					color: @orange;
+				}
+				&:active{
+					color: @orange;
+				}
+			}/*end link styles*/
+			
+		//Paragraphs
+			p{margin: 0 0 10px 0;}
+		 
+   
+   /*-- END - Variables --*/
+   
+   /*-- larger over all classes or styling themes --*/
+   		
+		//rounded corners and special effects
+		@radius: 10px;
+   
+   		//borders
+			.bordered-bottom(@thick: 1px,@type: solid,@color: white){
+				border-bottom: @arguments;
+			}
+			.bordered-all{
+				border: @thick @type @color;
+			}
+   
+   		//rounded corners   		
+			.rounded-corners(@radius: 5px){
+				border-radius: @radius;
+				-webkit-border-radius: @radius;
+				-moz-border-radius: @radius;
+			}//end box shadow
+		
+		//box shadow
+			@x: -2px; @y: 5px; @blur: 5px; @color: @lightGray;
+			.box-shadow{
+				box-shadow: @x @y @blur @color;
+				-webkit-box-shadow: @x @y @blur @color;
+				-moz-box-shadow: @x @y @blur @color;
+			}//end box shadow
+			
+			
+		//full screen background
+			.background-full{
+				z-index: -1000;							
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+				min-width: 50%;
+				min-height: 50%;
+				background-image: url(../img/bg_01.jpg);
+				background-repear: no-repeat;
+				background-size: auto 100%;
+			}
+			
+			
+			
+			.fullscreen{
+				position: absolute;
+				top: -50%;
+				left: -50%;
+				width: 200%;
+				height: 200%;
+				z-index: -1000;
+				
+				img{
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					margin: auto;
+					min-width: 50%;
+					min-height: 50%;
+				}/*-- END image --*/	
+			
+			}/*-- End fullscreen --*/
+			
+			
+		//Floats and clears
+			.floatLeft{float: left;}
+			.floatRight{float: right;}
+			
+			.clearLeft{clear: left;}
+			.clearRight{clear: right;}
+			.clearBoth{clear: both;}
+			.clearNone{clear: none;}
+			
+			.positionRelative{position: relative;}
+			.positionAbsolute{position: absolute;}
+		
+		//list styles
+			.listNone{list-style: none; list-style-image: none; margin: @no-margin; paddding: @no-padding;}
+			
+		//display styles
+			.displayInline{display: inline;}
+		
+		
+		
+   /*-- end larger classes or themes --*/
+   
+   /*=========================================================================
+   		site layout styling
+   ==========================================================================*/
+   		//Variables
+			@no-padding: 0px;
+			@no-margin: 0px;
+			
+			@some-padding: 16px;
+			@some-margin: 18px;
+			
+			@lots-padding: 26px;
+			@lots-margin: 29px;
+			
+			.transparent{background-color: rgba(0, 0, 0, 0);}
+		
+		
+		@section-padding: 0px;
+		@section-margin: 1px;
+		
+		.container{
+				position: relative;
+				width: 100%;
+				height: 100%;
+				margin: 0 auto;
+				padding: 0px 0px;
+				text-align: left;
+				margin-top: 0px;
+				margin-bottom: 0px;
+				overflow: hidden;
+								
+			.header{
+				//.box-shadow;
+				
+				position: relative;
+				
+				padding: @no-padding;
+				margin: @no-margin;
+				width: 100%;
+				height: 90px;
+				background: @darkGray;
+				color: @lightGray;
+				overflow: hidden;
+				z-index: 2;
+				
+				
+				h2{color: @white; .floatLeft; .clearNone; cursor: pointer;}
+				
+				img{.floatLeft; .clearNone;}
+				
+				.nav{.floatRight; .clearNone; 
+					li{
+						padding: @some-padding;
+						margin: @some-margin;
+						.listNone;
+					}
+				
+				}/*END nav*/
+			}/*-- END header --*/
+			
+							
+			.main{
+					padding: 1%;
+					text-align: center;
+					position: relative;
+										
+				.sub-section{
+					.rounded-corners;
+					//.box-shadow;
+					overflow: hidden;
+					/*min-width: @minWidth;*/
+					/*min-height: @minHeight;*/
+					display: inline-block;
+					padding: @section-padding;
+					margin: @section-margin;
+					//.bordered-all;
+					z-index: 1;
+					
+					.start_screen{
+						width: 100%;
+						height: 100%;
+						&:hover{background: none; cursor: pointer; h3{color: @white;}}
+					}/* -- end start screen styling --*/
+					
+					.start_screen_active{
+						width: 100%; 
+						height: 50px;
+						.transparent;
+						//background: @lightGray; 
+						cursor: default; 
+							
+							h3{.floatLeft; .clearNone; .displayInline; color: @white;} 
+							h5{color: @white; padding: @some-padding; cursor: pointer;
+								&:hover{color: @orange;}
+							} 
+							img{width: 47px; height: auto; .floatLeft; .clearNone; .displayInline; padding: @no-padding; margin:@no-margin;}
+					}/* -- end Active start screen styling --*/
+					
+					/*-- sub-section content --*/
+						.overFlow{overflow-x: hidden; overflow-y: scroll;}
+						
+						.content{
+							
+							p{
+							width: 300px;
+							height: 320px;
+							.floatRight;
+							.clearNone;
+							padding: @some-padding;
+							margin: @some-margin;
+							
+							text-align: left;
+							
+							background: @darkGray;
+							
+							.overFlow;
+							}//end paragraph formatting
+							
+							div#lists{
+								.floatRight;
+								.clearNone;
+								min-width: 300px;
+								overflow: visible;
+												
+								ul.create_explore_disc{
+									.floatRight;
+									.clearLeft;
+									li{
+										.listNone;
+										.floatRight;
+										.clearBoth;
+										
+										height: 20px;
+										width:410px;
+										overflow: hidden;
+										margin: 0px 0px 5px 0px;
+										
+										img{
+											.positionRelative;
+											.floatRight;
+											
+											&#creativity{
+												&:hover{cursor: pointer; top:-20px;}
+											}
+											&#explore{
+												&:hover{cursor: pointer; top:-20px;}
+											}
+											&#discover{
+												&:hover{cursor: pointer; top:-20px;}
+											}
+										}//end image links formatting
+									}//end content list 
+								}//end content unordered lists create explore discover
+								
+								ul.film_web_print{
+									.floatRight;
+									.clearBoth;
+									margin: 10px 0px 0px 0px;
+									
+									li{
+										.listNone;
+										.floatRight;
+										.clearNone;
+										
+										height: 30px;
+										overflow: hidden;
+										margin: 5px 5px;
+										
+										&.divider{width: 10px;}
+										&.film{width: 122px;}
+										&.print{width: 167px;}
+										
+										img{
+											.positionRelative;
+											.floatLeft;
+											
+											&#divide{
+												top: -11px; left: -146px;	
+												//&:hover{cursor: pointer; top: -36px; left: 0px;}
+											}
+											&#film{
+												top: -11px; left: -6px;	
+												&:hover{cursor: pointer; top: -45px; left: -6px;}
+											}
+											&#web{
+												top:-11px; left: -176px;
+												&:hover{cursor: pointer; top: -45px; left: -176px;}
+											}
+											&#print{
+												top:-11px; left: -345px;
+												&:hover{cursor: pointer; top: -45px; left: -345px;}
+											}
+										}//end image links formatting
+									}//end content list 
+								}//end content unordered lists film web print
+							}//end div lists
+							
+						}//end content container
+				
+					/*-- sub-section content --*/
+					
+				}/*-- end sub section --*/
+			}/*-- end main section --*/
+			
+			
+			/*-- Start the product configurator views --*/
+				//set up styling variables for configurator views
+				
+				//borders
+					@thin: 1px;
+					@thick: 2px;
+					@type_solid: solid;
+					@type_dot: dotted;
+					@color: @black;
+										
+					.viewLine{
+						border: @thin @type_solid @color;
+					}
+					
+					.line{
+						border: @thick @type_solid @color;
+					}
+					
+					.borderTop{
+						border-top: @thick @type_solid @color;
+					}
+					.borderRight{
+						border-right: @thick @type_solid @color;
+					}
+					.borderBottom{
+						border-bottom: @thin @type_solid @color;
+					}
+					.borderLeft{
+						border-left: @thick @type_solid @color;
+					}
+					
+					.border{
+						.borderTop;
+						.borderRight;
+						.borderBottom;
+						.borderLeft;
+					}
+					
+					.dotted{
+						border: @thick @type_dot @color;
+					}
+					.borderRightDotted{
+						border-right: @thick @type_dot @color;
+					}
+			
+			
+						
+			.footer{
+				//.box-shadow;
+			
+				position: absolute;
+				bottom: 0px;
+				width: 100%;
+				height: 45px;
+				background: @darkGray;
+				color: @lightGray;
+				padding: @no-padding;
+				margin: @no-margin;
+				overflow: hidden;
+				
+					img.be{ height: 30px; width: auto; .floatRight; cursor: pointer; margin: 5px 30px 0px 0px;}
+					img.tag{.floatLeft; margin: 10px 0px 0px 30px;}
+				
+			}/*-- END footer --*/
+			
+		}/*-- end container --*/
+		
+		//classes to be added by jQuery depending on the states
+			.home{}
+			
+			.about{}
+			
+			.services{}
+			
+			.contact{}
+			
+			.film{}
+			
+			.web{}
+			
+			.print{}
+			
+			.work{}
+		
+		  
+   /*-- end site layout styling --*/
+   
+  

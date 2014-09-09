@@ -1,0 +1,363 @@
+<!DOCTYPE HTML>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" data-ng-app="nsprdApp"> <!--<![endif]-->
+<!-- Inspired One Single page site September 18 2013 -->
+<head>
+    
+<!-- Meta -->
+	<title>INSPIRED ONE | Film and Creative Productions</title>
+	<meta name="title" content="INSPIRED ONE | Film and Creative Productions" />
+	<meta name="viewport" content="width = device-width, user-scalable = no, maximum-scale = 1">
+	<meta name="description" content="Inspired One Film and Creative Productions can help you take your ideas and visions and make them a reality, or add to them with more creativity. ">
+    <meta name="author" content="DBrown">
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+  	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+   <!-- Le fav and touch icons -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /> 
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/h/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/l/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/m/apple-touch-icon-precomposed.png">
+    
+<!-- Styles -->
+	<link rel="stylesheet" type="text/css"  href="css/foundation.css">
+	<link rel="stylesheet" type="text/css" href="css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="css/newStyles.css">
+	
+	<script src="js/vendor/custom.modernizr.js"></script>
+<!-- END headers -->
+</head>
+
+<body id="body" class="home" data-ng-controller="appController">
+<!-- nav -->
+<section class="nav">
+<div class="fixed">
+	<nav class="top-bar orange-borderBtm" data-topbar>
+		<ul class="title-area">
+			<li class="name">
+				<h1 class="subheader">
+					<a href="#">
+						<img class="top-bar-logo" src="img/logoSymbol.png" title="Inspired One" alt="Inspired One" />
+						INSPiRED ONE
+					</a>
+				</h1>
+			</li>
+		</ul>
+		
+		<section class="top-bar-section"> 
+			<ul class="right">
+				<li><a class="" href="#work">Work</a></li>
+				
+				<li><a class="" href="#what-we-do">What</a></li>
+				
+				<li><a class="" href="#who-we-are">Who</a></li>
+				
+				<li><a class="" href="#contact">Contact</a></li>
+			</ul>
+		</section>
+	</nav>
+</div> <!-- fixed -->
+</section>
+<!-- nav -->
+
+
+<!-- hero -->
+<section class="hero">
+	
+	<div class="row">
+	  <div class="small-8 small-centered columns centerText">
+		  <a class="brand" href="#"> <img src="img/logo-main-hero-clr.png" title="Inspired One" alt="Inspired One" /></a>
+	  </div> <!--columns-->
+	
+	  <div class="small-8 small-centered columns centerText">
+	  		<a class="brand" href="#"> <img src="img/logo-text-hero-clr.png" title="Inspired One" alt="Inspired One" /></a>
+	  </div> <!--columns-->
+	</div> <!-- row -->
+	
+	<div class="row">
+		<div class="small-8 small-centered columns">
+			<h1 class="subheader centerText">We are storytellers </h1>
+		</div> <!--columns-->
+	</div> <!-- row -->
+	
+</section> <!-- hero section -->
+
+
+<!-- intro -->
+<section class="intro">
+	<div class="row">
+		<div class="large-12 columns">
+			<h2 class="subheader centerText"><strong>Inspired One</strong> is a film production company based in Toronto, ON, Canada. We produce commercials, documentaries, and films for brands, corporations, musicians, artists, and people.</h2>
+		</div> <!-- span -->
+		<hr/>
+	</div> <!-- row -->
+</section> <!-- intro -->
+
+
+<!-- work -->
+<section id="work" data-ng-controller="mainWorkCtrl">
+
+	<div class="row">
+		<div class="large-12 columns">	
+			
+			<h3 class="subheader">Work</h3>
+			
+		</div>
+	</div>
+	
+	<div class="row" data-ng-repeat="video in siteData">
+		<div class="large-6 columns">
+			<div class="flex-video widescreen vimeo">
+				<!-- video goes here -->
+				<iframe src="//player.vimeo.com/video/{{ video.id }}" width="320px" height="auto" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	
+			</div> <!-- video container -->
+		</div>
+		
+		<div class="large-6 columns">
+			<h4 class="subheader">{{ video.title }}</h4>
+			<p class="lead">{{ video.description }}</p>
+		</div>
+	<hr/>
+	</div> <!-- row project item -->
+
+</section>
+
+<!-- what we do -->
+<section id="what-we-do">
+	
+		<div class="row">
+			<div class="large-12 columns">
+				<h3 class="subheader">What We Do</h3>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="large-12 columns">
+				<h4 class="subheader">We tell stories</h4>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="large-4 columns">
+				
+				<p class="lead">
+				Through the use of digital media, we produce video, film, and television content from the ground up. We have ideas for every client about how to share their stories and create brand culture through the use of video marketing and advertising. We see the potential in everything. We work with a network of filmmakers who strive to push creative boundaries while effectively telling compelling stories.
+				</p>
+			</div>
+			
+			<div class="large-4 columns">	
+				<p class="lead">
+				If you have message or anything to sell your best tool is video content; whether you're an artist, musician, a small business or a large corporation. With smart phones capable of HD video, and access to content and stories from all over the planet. People are bombarded constantly with video content, Inspired will help you separate your content from the rest and tell your story.     
+				</p>
+			</div> <!-- span -->
+			
+			<div class="large-4 columns">
+				
+				<p class="lead">We strongly believe the power of film is the absolute best way to spread a message and create change regardless of what you are saying. Short, impactful, memorable commercials could be the key to success for your business. Explore the possibilities with us, lets get creative and help your brand stand out. 
+					
+				</p>
+			</div> <!-- span -->
+			
+		</div>
+		<div class="row">
+			<div class="large-12 columns">	
+				<h2 id="everyone" class="subheader">Everyone has a story, and we want to help you share it.</h2>
+			</div>
+			<hr/>
+		</div>
+			
+</section>
+
+<!-- who we are -->
+<section id="who-we-are">
+	
+	<div class="row">
+		<div class="large-12 columns">
+			
+			<h3 class="subheader">Who We Are</h3>
+			
+			<h4 class="subheader">Inspired ONE is a film production company consisting of a team of filmmakers and multimedia artists who strive to push creative limits with each new production.</h4>
+			
+			<p class="lead">Founded in 2008 by Bryan Gauer and Devin Brown during the production of  their first documentary film about the McMaster Marauder’s football team’ season. Based on the response and success of the film, Inspired ONE was incorporated and began producing a variety of media and film content through various departments within McMaster, and for a wide range of clients.
+			</p>
+			
+			<p class="lead">
+	Previous productions include Video Tours, Promotional Videos, Music Videos, Documentaries, Event Highlights, Behind the Scenes, Corporate Video, Web and TV Commercials, TV Productions, and Short Films.
+	From the beginning Inspired ONE has always been about working with talented, driven team members to produce work that is entertaining, motivating, and inspiring.
+			</p>
+			<p class="lead">
+			From the beginning Inspired ONE has always been about working with talented, driven team members to produce work that is entertaining, motivating, and inspiring.
+			</p>
+		</div>
+	</div> <!-- row -->
+	
+	<div class="row hide-for-small">
+		<div class="small-12 large-centered columns">
+			<img src="img/_AJ23281bw.jpg" title="Inspired One Managing Partners" alt="Inspired One Managing Partners" /></a>
+		</div> <!--columns-->
+	</div><!-- row -->
+	
+	<div class="row">
+		<div class="large-6 columns">
+			<div class="small-12 small-centered columns show-for-small">
+				<img src="img/_AJ23124bw.jpg" title="Devin Brown - Managing Partner" alt="Devin Brown - Managing Partner" /></a>
+			</div> <!--columns-->
+			
+			<h4 class="subheader">Devin Brown</h4>
+			<h5 class="subheader">Managing Partner</h5>
+			
+		</div> <!-- span -->
+		
+		<div class="large-6 columns">
+			<div class="small-12 small-centered columns show-for-small">
+				<img src="img/_AJ23147bw.jpg" title="Bryan Gauer - Managing Partner" alt="Bryan Gauer - Managing Partner" /></a>
+			</div> <!--columns-->
+			<h4 class="subheader">Bryan Gauer</h4>
+			<h5 class="subheader">Managing Partner</h5>
+			
+		</div> <!-- span -->
+	<hr/>
+	</div> <!-- row -->
+	
+</section>
+
+<!-- contact -->
+<section id="contact">
+	
+	<div class="row">
+		<div class="small-8 small-centered columns">
+			<h1 class="subheader centerText">Want to work with us?</h1>
+			<h1 class="subheader centerText">Get in touch! </h1>
+		</div> <!--columns-->
+		<div class="large-6 columns">
+			<h2 class="subheader">
+				<span class="email-contact" data-name="hello">info@inspired-one.com</span>
+				<!--
+<br /><a href="https://twitter.com/inspired-one" target="_blank">@inspired-one</a>
+				<br /><a href="http://www.facebook.com/inspired-one" target="_blank">facebook.com/inspired-one</a>
+-->
+			</h2>
+		</div>
+			
+		<div id="form" class="large-6 columns">
+            <form name="contactForm" method="post" action="#" data-abide>
+            	<fieldset>
+            		<legend><h2 class="subheader">Tell us about your project</h2></legend>
+					
+					<div class="row">
+						<div class="large-12 column">
+			                <label for="formName">You <small>Required</small></label>
+			                <input type="text" name="formName" id="formName" placeholder="First Last" required pattern="[a-zA-Z]+"/>
+			                <small class="error">Your name is required</small>
+						</div>
+					</div>
+	                <div class="row">
+						<div class="large-12 column">
+			                <label for="formCompany">Your Company</label>
+			                <input type="text" name="formCompany" id="formCompany" placeholder="Company Name" pattern="alpha_numeric"/>
+						</div>
+	                </div>
+	                
+	                <div class="row">
+						<div class="large-12 columns">
+							<label for="formEmail"> Your Email <small>Required</small></label>
+			                <input type="email" name="formEmail" id="formEmail" placeholder="you@email.com" required pattern="email"/>
+			                <small class="error">A valid email is required</small>
+						</div>
+	                </div>
+					
+					<div class="row">
+						<div class="large-12 columns">
+							<label for="formMessage">	Describe the project or idea <small>Required</small></label>
+			                <textarea  cols="100%" rows="3" name="formMessage" id="formMessage" placeholder="I want to make an amazing video" required pattern="alpha_numeric"></textarea>
+			                <small class="error">Please tell us a little about you and your project.</small>
+			                
+						</div>
+					</div>
+					<div class="row">
+						<div class="large-12 columns"> 
+							<input class="button large expand orange-bg" type="submit" name="submit" value="Get in touch" id="submit" />
+						</div>
+					</div>
+					
+            	</fieldset>
+            </form>
+        </div><!--end form-->
+		
+		<div class="row">
+		<hr/>
+		<div class="small-8 small-centered columns">
+			<h1 class="subheader centerText">Thank you. </h1>
+			<h1 class="subheader centerText">We look forward to working with you! </h1>
+		</div> <!--columns-->
+	</div> <!-- row -->
+	</div> <!-- row -->
+	
+</section>
+        	
+<footer>
+	
+		
+		<div class="row">
+		  <div class="small-1 small-centered columns">
+			  <a class="brand" href="#"> <img src="img/logoSymbol.png" title="Inspired One" alt="Inspired One" /></a>
+		  </div> <!--columns-->
+		
+		  <div class="small-3 small-centered columns">
+		  		<a class="brand" href="#"> <img src="img/logoText.png" title="Inspired One" alt="Inspired One" /></a>
+		  </div> <!--columns-->
+		</div> <!-- row -->
+		
+		<div class="row">	
+			<div class="small-1 small-centered columns">
+				<p class="copy">&copy; <script type="text/javascript">var d = new Date(); document.write(d.getFullYear() + "  ");</script></p>
+			</div> <!--columns-->
+		</div> <!-- row -->
+	
+	
+</footer>
+        
+    <!-- jquery at the very top of the bottom -->
+	<script type="text/javascript" src="js/vendor/jquery.js"></script>
+	
+	<!-- AngularJS Needs -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular-sanitize.min.js"></script>
+	
+	<!-- END AngularJS Needs -->
+	
+	<!-- Scripts - Libraries -->
+	<!--
+<script>
+	  document.write('<script src=' +
+	  ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
+	  '.js><\/script>')
+	  </script>
+-->
+		<!--  foundation basic -->  
+	<script src="js/foundation.min.js"></script>
+	<script>$(document).foundation();</script>
+	  
+	<script src="js/inspired-app-0.0.1.js"></script>
+    <script src="js/inspired-jquery-0.0.1.js"></script>
+    
+    <!-- google analytics -->
+    <script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-34846099-1']);
+	  _gaq.push(['_trackPageview']);
+	
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	</script>
+	
+</body>
+
+</html>
+

@@ -1,0 +1,131 @@
+/**** 
+
+Inspired one new media productions stylesheet
+Author: Devin Brown
+Date: Nov 5 2013
+
+****/
+
+/* web font */
+@font-face{font-family:'FuturaBT-Medium';src:url('webfonts/21486D_0_0.eot');src:url('webfonts/21486D_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/21486D_0_0.woff') format('woff'),url('webfonts/21486D_0_0.ttf') format('truetype');}.clearfix{*zoom:1;}.clearfix:before,.clearfix:after{display:table;content:"";}
+
+#body{
+	padding-top: 60px;
+	overflow-x: hidden !important;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family:FuturaBT-Medium;
+}
+
+h3{
+	color: #EC6624 !important;
+}
+
+/* Foundation overrides */
+.row{
+	width: 100%;
+	max-width: 75em;
+}
+
+.top-bar{
+	box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+	height: 60px;
+	padding: 8px 0px;
+	color: #EC6624 !important;
+	background-color: #FFFFFF;
+}
+
+.orange-borderBtm{
+	border-bottom: 5px solid #EC6624;
+}
+
+.top-bar-logo{
+	margin-top: -5px;
+	width: 40px;
+	height: 40px;
+}
+
+.top-bar .name h1 a {
+    font-size: 26px;
+    font-weight: normal;
+    color: #EC6624 !important;
+}
+
+.top-bar-section ul, .top-bar-section ul li, .top-bar-section li a:not(.button){
+	background-color: #FFFFFF;
+	color: #EC6624 !important;
+}
+
+.button .large{
+	margin-top: 10px !important;
+}
+
+#everyone{
+	text-align: right;
+}
+
+/* position utilities */
+.centerText{
+	text-align: center;
+}
+
+
+/* color utilities */
+/* 
+	grey #58595B
+	orange #EC6624 
+*/
+
+.grey-bg{
+	background-color: #58595B !important;
+	color: #FFFFFF !important;
+}
+
+.grey-text{
+	color: #58595B !important;
+}
+
+.orange-bg{
+	background-color: #EC6624 !important;
+	color: #FFFFFF !important;
+}
+
+.orange-bg:hover{
+	background-color: #EC6624 !important;
+	color: #FFFFFF;
+}
+
+.orange-text{
+	color: #EC6624 !important;
+}
+
+.radial-center { /* fallback */ background-color: #EC6624; background-image: url(images/radial_bg.png); background-position: center center; background-repeat: no-repeat; /* Safari 4-5, Chrome 1-9 */ /* Can't specify a percentage size? Laaaaaame. */ background: -webkit-gradient(radial, center center, 0, center center, 460, from(#EC6624), to(#933f19)); /* Safari 5.1+, Chrome 10+ */ background: -webkit-radial-gradient(circle, #EC6624, #933f19); /* Firefox 3.6+ */ background: -moz-radial-gradient(circle, #EC6624, #933f19); /* IE 10 */ background: -ms-radial-gradient(circle, #EC6624, #933f19); /* Opera couldn't do radial gradients, then at some point they started supporting the -webkit- syntax, how it kinda does but it's kinda broken (doesn't do sizing) */ }
+
+/* Styles */
+
+.textRight{
+	text-align: right !important;
+}
+
+/* Hero */
+.hero h1{
+	font-size: 72px;
+	color: #EC6624;
+	line-height: 1;
+	margin-top: 0.8em;
+	text-shadow: 0px 2px 3px rgba(0, 0, 0,0.75);
+}
+
+.brand img{
+	margin-top: 20px;
+}
+
+/****  MEdia Queries  ****/
+@media (max-width:480px){
+	/* Hero */
+	.hero h1{
+		font-size: 35px;
+	}	
+	
+}
